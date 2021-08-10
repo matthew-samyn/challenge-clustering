@@ -1,0 +1,21 @@
+a2_y_mean, a2_x_mean ,a2_y_range
+a2_y_mean, a2_y_range ,a2_x_fft_max
+a2_y_mean, a2_y_range ,a2_y_fft_max
+a2_y_mean, a2_x_fft_max ,a2_y_fft_max
+a2_x_fft_max, a2_y_fft_max ,a2_z_fft_range
+
+['a2_x_fft_max', 'a2_z_fft_range', 'a2_y_mean', 'a2_y_fft_max']
+['a2_x_fft_max', 'a2_z_fft_range', 'a2_y_mean', 'a2_y_range']
+['a2_x_fft_max', 'a2_y_mean', 'a2_y_fft_max', 'a2_y_range']!!
+
+
+
+
+
+
+
+
+
+
+ryan
+
