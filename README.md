@@ -37,9 +37,12 @@ Below however, you can find the links to both original files.
 # Usage
 | File                             | Description                                                                         |
 |----------------------------------|-------------------------------------------------------------------------------------|
-| Feature_engineering_csv.py       | File containing Python code  <br>Makes a .csv file to put into different clustering algorithms. |
+| Feature_engineering_csv.py       | File containing Python code.<br>Makes a .csv file to put into different clustering algorithms. |
+| Clustering_KMeans.ipynb          | Jupyter Notebook containing Python code.   <br>Contains all my progress on day1-2   |
+| Functions.py                     | File containing Python code.  <br>Functions I will be using in the future, when handling clustering. |
 | bearing_clustering_assignment.md | File containing the assignment details, as given to us by BeCode.                   |
 | Visuals                          | Folder containing interesting plots, used to gain insight in the features.          |
+| Python_files                     | Folder containing Python code.  <br>Used this code from another group to get a .csv with 39 features. |
 | CSV                              | Folder containing .csv files used in this project.                                  |
 | clustering_ready.csv             | .csv file used for clustering.                                                      |
 | Feature_engineered.csv           | .csv file already preprocessed and with added features, from a previous assignment. |
