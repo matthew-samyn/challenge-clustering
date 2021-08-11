@@ -35,17 +35,18 @@ Below however, you can find the links to both original files.
 
 
 # Usage
-| File                             | Description                                                                         |
-|----------------------------------|-------------------------------------------------------------------------------------|
-| Feature_engineering_csv.py       | File containing Python code.<br>Makes a .csv file to put into different clustering algorithms. |
-| Clustering_KMeans.ipynb          | Jupyter Notebook containing Python code.   <br>Contains all my progress on day1-2   |
-| Functions.py                     | File containing Python code.  <br>Functions I will be using in the future, when handling clustering. |
-| bearing_clustering_assignment.md | File containing the assignment details, as given to us by BeCode.                   |
-| Visuals                          | Folder containing interesting plots, used to gain insight in the features.          |
-| Python_files                     | Folder containing Python code.  <br>Used this code from another group to get a .csv with 39 features. |
-| CSV                              | Folder containing .csv files used in this project.                                  |
-| clustering_ready.csv             | .csv file used for clustering.                                                      |
-| Feature_engineered.csv           | .csv file already preprocessed and with added features, from a previous assignment. |
+| File                               | Description                                                                            |
+|------------------------------------|----------------------------------------------------------------------------------------|
+| Feature_engineering_csv.py         | File containing Python code.<br>Makes a .csv file to put into different clustering algorithms. |
+| Clustering_KMeans.ipynb            | Jupyter Notebook containing Python code.   <br>Contains all my progress on day1-2      |
+| Functions.py                       | File containing Python code.  <br>Functions I will be using in the future, when handling clustering. |
+| Clustering_Kmeans_2_features.ipynb | File containing Python code.  <br>Looked for a second time, now using functions, for the best 2 features for clustering. |
+| bearing_clustering_assignment.md   | File containing the assignment details, as given to us by BeCode.                      |
+| Visuals                            | Folder containing interesting plots, used to gain insight in the features.             |
+| Python_files                       | Folder containing Python code.  <br>Used this code from another group to get a .csv with 39 features. |
+| CSV                                | Folder containing .csv files used in this project.                                     |
+| clustering_ready.csv               | .csv file used for clustering.                                                         |
+| Feature_engineered.csv             | .csv file already preprocessed and with added features, from a previous assignment.    |
 
 # Step by step explanation of how I handled the project.
 ## 1. Finding the "best" features
@@ -59,8 +60,9 @@ When plotting the highest scores, I noticed that the outliers were causing my cl
 
 ## 3. Using Kmeans on two features, plotting everything.
 I abandoned my first route, and went on a search for the best score, while having an acceptable distribution between clusters.  
-I ended up on these two features: "y_mean", "x_fft_min"
-![](Visuals/two_features_high_score1.png)
+I ended up on these two features: "x_mean", "y_range"
+
+![](Visuals/Improved_2_features_score.png)
 
 ## 4. Using Kmeans on 3 features, plotting everything.
 I continued along this route and came up with this:
@@ -93,7 +95,14 @@ I wrote down exactly what I was searching for in the plots every time, and how I
 5. Min datapoints x in every cluster. (PARAM: int)
 
 ## 7. I managed to automate the process.
-It was also at that time that I had to send in my assignment...
+| Parameter          | Values          |
+|--------------------|-----------------|
+| Feature columns    | y_mean, x_fft_mean |
+| Silhouette_score   | 0.84            |
+| Number of clusters | 3               |
+
+![](Visuals/two_features_high_score1.png)
+
 
 
 # Contributor
