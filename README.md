@@ -44,16 +44,53 @@ Below however, you can find the links to both original files.
 | clustering_ready.csv             | .csv file used for clustering.                                                      |
 | Feature_engineered.csv           | .csv file already preprocessed and with added features, from a previous assignment. |
 
-# Step by step explanation of how I did it
-_______________  WITH VISUALS
+# Step by step explanation of how I handled the project.
+## 1. Finding the "best" features
+Plotting faulty bearings against good bearings to see if these were good features to keep for clustering.
+![](Visuals/y_max_diff%20vs%20x_mean_diff.png)
 
-# Visuals
-## _______________  
-_______________    
+## 2. Using Kmeans on two features, plotting the highest scores.
+Eventually I wrote a for-loop that went over 2-6 clusters and looped over every possible combination of 2 features.  
+When plotting the highest scores, I noticed that the outliers were causing my clusters to divide real badly.
+![](Visuals/Troubles_outliers.png)
 
-## _______________  
+## 3. Using Kmeans on two features, plotting everything.
+I abandoned my first route, and went on a search for the best score, while having an acceptable distribution between clusters.  
+I ended up on these two features: "y_mean", "x_fft_min"
+![](Visuals/two_features_high_score1.png)
 
-_______________  
+## 4. Using Kmeans on 3 features, plotting everything.
+I continued along this route and came up with this:
+
+| Parameter          | Values                       |
+|--------------------|------------------------------|
+| Feature columns    | y_mean, x_fft_max ,y_fft_max |
+| Silhouette_score   | 0.59                         |
+| Number of clusters | 3                            |
+
+![](Visuals/3_features_0.59.png)
+
+## 5. Using Kmeans on 4 features, plotting everything.
+| Parameter          | Values                                |
+|--------------------|---------------------------------------|
+| Feature columns    | x_fft_max, y_mean, y_fft_max, y_range |
+| Silhouette_score   | 0.56                                  |
+| Number of clusters | 3                                     |
+
+![](Visuals/Kmeans_4_features_.56.png)
+
+## 6. Making functions to automate as much as possible.
+I realised that the way I was doing all the steps before, required a lot of me, looking at plots. 
+I wrote down exactly what I was searching for in the plots every time, and how I could make it clear to the computer what that was.
+1. Combinations of features.
+2. Kmeans of every feature-combination (PARAM: List)
+    * With range(x) amount of clusters (PARAM: Int)
+3. Single data point silhouette score never below x (PARAM: float)
+4. Total silhouette scores only above x (PARAM: float)
+5. Min datapoints x in every cluster. (PARAM: int)
+
+## 7. I managed to automate the process.
+It was also at that time that I had to send in my assignment...
 
 
 # Contributor

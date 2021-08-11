@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("CSV output/Leonor_csv_bearings.csv")
+df = pd.read_csv("CSV output/preprocessed_bearings.csv")
 print(df.shape)
 df = df[df["status"] == 0]
 df = df.drop(['rpm_mean', 'w_mean','w_range','w_max','status'], axis=1)
